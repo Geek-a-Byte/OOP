@@ -6,7 +6,7 @@ int main()
     int *p;
     try
     {
-        p = new int[100000000];
+        p = new int[100000];
     }
     catch (bad_alloc xa)
     {

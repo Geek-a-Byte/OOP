@@ -10,6 +10,9 @@ void Xhandler()
     catch (const char *c)
     {
         cout << "caught char* inside xhandler\n ";
+        //rethrow the exception "hello" by writing only "throw"
+        //because when we "throw" from a catch block it means we are rethrowing the
+        //exception caught by this catch block
         throw;
     }
 }

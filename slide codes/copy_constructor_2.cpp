@@ -4,7 +4,7 @@ using namespace std;
 class Student
 {
     int id;
-    char *name;
+    string name;
 
 public:
     // Student()
@@ -13,33 +13,30 @@ public:
     //     name = "";
     //     cout << "Default constructor\n";
     // }
-    Student(int id, char *p)
+    Student(int id, string p)
     {
         this->id = id;
-        name = new char[strlen(p)];
-        strcpy(name, p);
+        name = p;
         //this->name = name;
         cout << "constructing " << name << endl;
     }
     Student(const Student &obj)
     {
         id = obj.id;
-        name = new char[strlen(obj.name) + 1];
-        strcpy(name, obj.name);
+        name = obj.name;
         cout << "copy constructor calling " << name << endl;
     }
     ~Student()
     {
         cout << "destructing "
              << name << endl;
-        delete[] name;
     }
 
     int getID()
     {
         return id;
     }
-    char *getName()
+    string getName()
     {
         return name;
     }

@@ -7,6 +7,9 @@ using namespace std;
 
 class StackFull
 {
+    //default constructor auto created by the compiler so we can send that here
+    //default constructor will return an object of the class
+    //this constructor will accept no parameter and will have an empty body
 };
 class StackEmpty
 {
@@ -19,7 +22,9 @@ class Stack
 public:
     Stack()
     {
-        top = -1; //auto called when an object of this class is created
+        top = -1;
+        //auto called when an object of this class is created
+        //as there is no other constructor with parameters
     }
     void push(int v)
     {
