@@ -23,8 +23,8 @@ public:
     Point calculateMID(Point p2)
     {
         Point p3;
-        p3.x = (x + p2.x) / 2;
-        p3.y = (y + p2.y) / 2;
+        p3.x = (this->x + p2.x) / 2;
+        p3.y = (this->y + p2.y) / 2;
         return p3;
     }
     void showXY()
