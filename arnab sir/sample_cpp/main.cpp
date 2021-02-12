@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
-class shape
+class shape // abstract
 {
 public:
     virtual double getarea() = 0;
 };
-class triangle : public shape
+class triangle : public shape //concrete
 {
 public:
     int height, base;
@@ -15,7 +15,7 @@ public:
         return 0.5 * height * base;
     }
 };
-class circle : public shape
+class circle : public shape //concrete
 {
 public:
     int radius;
