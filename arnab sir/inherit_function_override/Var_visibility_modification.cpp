@@ -20,18 +20,22 @@ public:
 
 class Point3D : public Point
 {
-    //will inherit the protected variable x & y which will remain protected here
-    //will inherit the public function which will remain public here
-    //protected members can be access by within the class
+    //x ->protected
+    //y ->protected
+    //setpoint() ->public
+    //show() ->public
+    //protected members can be accessed by within this class
     int z;
 
 public:
-    void setZ(int a, int b, int c)
+    void setPoint3D(int a, int b, int c)
     {
-        setpoint(a, b);
+        //setpoint(a, b);
+        x = a;
+        y = b;
         z = c;
     }
-    void show()
+    void show() //...inherited function override
     {
         cout << x << "," << y << "," << z << endl;
     }
@@ -40,7 +44,8 @@ public:
 int main()
 {
     Point3D p2;
-    p2.setZ(5, 6, 7);
+    p2.setPoint3D(5, 6, 7);
+    p2.Point::show();
     p2.show();
     return 0;
 }

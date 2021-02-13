@@ -8,9 +8,9 @@ public:
     {
         cout << "Ground floor is created " << endl;
     }
-    groundfloor(int r)
+    groundfloor(int g)
     {
-        cout << "Ground floor is created with " << r << " rooms" << endl;
+        cout << "Ground floor is created with " << g << " rooms" << endl;
     }
     ~groundfloor()
     {
@@ -25,9 +25,9 @@ public:
     {
         cout << "First floor is created " << endl;
     }
-    firstfloor(int r, int g) : groundfloor(g)
+    firstfloor(int f, int g) : groundfloor(g)
     {
-        cout << "First floor is created with " << r << " rooms" << endl;
+        cout << "First floor is created with " << f << " rooms" << endl;
     }
 
     ~firstfloor()
@@ -39,9 +39,13 @@ public:
 class secondfloor : public firstfloor
 {
 public:
-    secondfloor(int a, int b, int c) : firstfloor(b, c)
+    secondfloor()
     {
-        cout << "Second floor is created with " << a << " rooms" << endl;
+        cout << "second floor is created " << endl;
+    }
+    secondfloor(int s, int f, int g) : firstfloor(f, g)
+    {
+        cout << "Second floor is created with " << s << " rooms" << endl;
     }
     ~secondfloor()
     {
@@ -54,3 +58,12 @@ int main()
     secondfloor f(3, 1, 5);
     return 0;
 }
+/*
+o/p:
+Ground floor is created with 5 rooms
+First floor is created with 1 rooms
+Second floor is created with 3 rooms
+Second floor is destroyed 
+First floor is destroyed 
+Ground floor is destroyed 
+*/

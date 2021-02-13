@@ -12,11 +12,17 @@ public:
         x = a;
         y = b;
     }
-    void show() { cout << x << " " << y << endl; }
+    void show()
+    {
+        cout << "p.point::show()->\n";
+        cout << x << " " << y << endl;
+    }
 };
 
 class point3d : public point
-{ // show() - own copy ,,,, point::show()
+{
+    // show() - inherited from base can be accessed by ,,,, point::show()
+    //now we override the inherited function show()
     int z;
 
 public:
@@ -27,7 +33,8 @@ public:
     }
     void show()
     {
-        point::show();
+        cout << "p.show()->\n";
+        //point::show();
         cout << x << " " << y << " " << z << endl;
     }
 };

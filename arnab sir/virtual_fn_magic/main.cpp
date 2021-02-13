@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
+//binding means matching the function call with the correct func def at runtime or compile time
 //early binding is //faster than late binding as it takes place in compile time
 //vtable (virtual table)-> it is an array that holds the address of all the virtual functions in a class
-//vptr->vptr is a pointer that holds the address of the array inside the class
+//vptr->vptr is a pointer that holds the address of the array/vtable inside the class(as a member of the class)
 //virtual functions are mapped in runtime
 //other functions are mapped in compiletime
 class base1
@@ -14,15 +15,18 @@ public:
     }
     virtual void show()
     {
-        cout << " Hello from base class " << endl;
+        cout << "Hello from base class " << endl;
     }
 };
 class derived1 : public base1
-{               //private e kokhono virtual function rakha uchit na jekhane sensitive data thake, naile ptr diye runtime e access kore fela jabe
-private:        //access specifier gula compile time ei check hoy, runtime e jokhon pointer diye virtual func ke access korte chay tai access korte pare, as tokhon ar acsess spcefier check hoy na
+{               //private e kokhono virtual function rakha uchit na jekhane sensitive data thake,
+                //naile ptr diye runtime e access kore fela jabe
+private:        //access specifier gula compile time ei check hoy,
+                //runtime e jokhon pointer diye virtual func ke access korte chay tai access korte pare,
+                //as tokhon ar access spcefier check hoy na
     void show() // vtable2 will b created which will store the adress of show() fn in derived class..vptr will be inherited.
     {
-        cout << " Hello from derived class..this is private version.." << endl;
+        cout << "Hello from derived class..this is private version.." << endl;
     }
 
 public:
@@ -39,11 +43,12 @@ int main()
 
     base1 *ptr;
     ptr = &b;
-    ptr->f1();
-    ptr->show();
+    ptr->f1();   //f1 is called
+    ptr->show(); //hello from base class
 
     ptr = &d;
-    ptr->f1();
+    ptr->f1();   //f1 is overrided
     ptr->show(); // accessing private member from main()..how ????...answer - "because acess specifier is checked only during compile time."
+    //Hello from derived class..this is private version..
     return 0;
 }

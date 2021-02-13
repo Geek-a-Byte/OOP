@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class shape // abstract
+class shape // interface / abstract
 {
 public:
     virtual double getarea() = 0;
@@ -37,6 +37,6 @@ int main()
     circle c1;
     c1.radius = 10;
     show(&c1);
-    //shape s1;
+    //shape s1; //error -> abstract class cant be instantiated
     //  show(&s1);
 }
