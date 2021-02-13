@@ -1,19 +1,19 @@
 #include <iostream>
 using namespace std;
 
-class groundfloor
+class ground
 {
 public:
-    groundfloor()
+    ground()
     {
         cout << "Ground floor is created " << endl;
     }
 };
 
-class firstfloor : public groundfloor
+class first : public ground
 {
 public:
-    firstfloor()
+    first()
     {
         cout << "First floor is created " << endl;
     }
@@ -21,7 +21,7 @@ public:
 
 int main()
 {
-    firstfloor f;
+    first f;
     //ground floor is created
     //first floor is creatad
 

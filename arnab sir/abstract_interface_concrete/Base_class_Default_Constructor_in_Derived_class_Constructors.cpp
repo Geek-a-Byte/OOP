@@ -47,3 +47,11 @@ int main()
     Derived d1;
     Derived d2(10);
 }
+
+/* o/p:
+Base default constructor
+Base default constructor
+Derived default constructor
+Base default constructor
+Derived parameterized constructor
+*/
