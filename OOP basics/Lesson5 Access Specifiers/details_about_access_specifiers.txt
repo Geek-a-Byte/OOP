@@ -1,0 +1,18 @@
+There are three levels of access specifiers-
+Private 
+-Usage -Default / 'private:'
+-Private vars accessible only by other member functions of the class & friend functions
+-Private functions can’t be called using objects !
+-Private member vars are not accessible from child class objects!
+
+
+Public
+-Usage –'public:'
+-Accessible by other members and by any other part of the program that contain the class
+-Can set and get the value of public variables without any member function
+
+Protected
+-Usage –'protected:'
+-Protected vars can only be accessed using member functions of the class.
+-Protected functions can’t be called using objects!/can't be accessed directly from main
+-Inherited protected vars can be accessed from main function using public functions in child / derived classes.
