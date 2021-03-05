@@ -1,6 +1,6 @@
 // parent classes - person,student
 // child class - l2student
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 class person
 {

@@ -1,10 +1,3 @@
-//! base - pure virtual functions - f1,f2
-//! derived1 - f1() definition
-//! derived2 - f2() definition
-// !very very Imp note :
-//!if you dont override a pure virtual function in a derived class,
-//!that derived class also becomes abstract
-//! you have to identify which is concrete, abstract and interface
 //very imp source: https://www.codesdope.com/cpp-virtual-and-abstract/
 /*
 //*Runtime polymorphism
@@ -81,8 +74,8 @@ meaning to hide the implementation and show the function definition to the user 
 */
 
 /*
-//* INTERFACE
-//* 1.Interface or Interface class is an ABSTRACT CLASS which has no member variables 
+//*INTERFACE
+//*1.Interface or Interface class is an ABSTRACT CLASS which has no member variables 
 //*2.and all its functions are pure virtual and  
 //*3.Its derived classes must provide definition to each of the pure virtual functions of the base class.
 //*4.Like an abstract class, we can't create objects of an interface.
@@ -106,10 +99,10 @@ public:
         cout << "base\n";
     }
     //if the base() is commented out this class would be an interface otherwise it is abstract
-    virtual void f1() = 0; // pure virtual functions
-    virtual void f2() = 0;
+    virtual void f1() = 0; // pure virtual function
+    virtual void f2() = 0; // pure virtual function
 };
-class derived1 : public base // abstract class - why - refer very imp note above -> derived 1 e f2() define kora hoy nai
+class derived1 : public base // abstract class - derived1 has no f2() definition
 {
 public:
     derived1()
