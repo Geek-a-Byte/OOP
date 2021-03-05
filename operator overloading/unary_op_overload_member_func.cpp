@@ -18,7 +18,7 @@ public:
         cout << "a : " << a << " b: " << b << " c: " << c << endl;
     }
 
-    void operator++() //....friend na korle object pathano lagbe na
+    void operator++()
     {
         ++a;
         ++b;
