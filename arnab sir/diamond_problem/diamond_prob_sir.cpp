@@ -2,8 +2,7 @@
 // grandpa class - person (name,age)
 // 2 children of grandpa - a) student (roll)  b) faculty (rank)
 // child of student and faculty (grandchild of person) - l2student (marks)
-
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 class person
 {
