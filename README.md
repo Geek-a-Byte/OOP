@@ -1,5 +1,5 @@
 # OOP
-oop basic topics
+``basics``
 
 <pre>
 Lesson1 namespace
@@ -17,4 +17,23 @@ Lesson12 Static
 Lesson13 exception
 Lesson14 template function
 Lesson15 generic class
+</pre>
+
+``inheritance``
+
+<pre>
+Lesson1 abstract_interface_concrete
+Lesson2 constructor-destructor calling sequence
+Lesson3 function and variable modify visibility
+Lesson4 inherit_function_override
+Lesson5 variable override
+Lesson6 multilevel_inherit
+Lesson7 multiple_inherit
+Lesson8 early_binding
+Lesson9 function_overriding
+Lesson10 virtual_fn_magic
+Lesson11 diamond_problem
+Lesson12 object_slicing
+Lesson13 virtual_destructor
+Lesson14 delegate_inherit
 </pre>
